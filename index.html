@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Train and Ask</title>
+</head>
+<body>
+
+<h2>Upload and Train</h2>
+<form action="/train" method="post" enctype="multipart/form-data">
+    <input type="file" name="file_path">
+    <input type="submit" value="Train">
+</form>
+
+<h2>Ask a Question</h2>
+<form action="/ask" method="post">
+    <label for="model_id">Model ID:</label>
+    <input type="text" id="model_id" name="model_id">
+    <br>
+    <label for="question">Question:</label>
+    <input type="text" id="question" name="question">
+    <br>
+    <input type="submit" value="Ask">
+</form>
+
+</body>
+</html>
