@@ -2,7 +2,11 @@ from flask import Flask, request, jsonify
 import openai
 
 app = Flask(__name__)
-openai.api_key = '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'
+with open('config.json', 'r') as config_file:
+    config = json.load(config_file)
+
+openai.api_key = config["OPENAI_API_KEY"]
+
 
 @app.route('/train', methods=['POST'])
 def train_model():

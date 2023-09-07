@@ -1,7 +1,11 @@
 import openai
 import json
 
-openai.api_key = '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'  # Replace with your actual API key
+with open('config.json', 'r') as config_file:
+    config = json.load(config_file)
+
+openai.api_key = config["OPENAI_API_KEY"]
+  # Replace with your actual API key
 
 def submit_for_finetuning(jsonl_file_path):
     # Step 2: Upload the file
