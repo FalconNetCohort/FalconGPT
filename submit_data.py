@@ -1,5 +1,5 @@
-import openai
 import json
+import openai
 
 with open('config.json', 'r') as config_file:
     config = json.load(config_file)
